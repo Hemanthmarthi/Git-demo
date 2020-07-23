@@ -59,7 +59,7 @@ git branch | grep -v "master" | xargs git branch -D
 git ls-remote // how to see the remote branches
 
 To checkout a remote branch locally
-git checkout -t origin/<feature branch name>        // track remote branch
+git checkout -t origin/<feature branch name>        // -t = track 
 
 
 git cherry-pick <commitId> // we can use it to get a commit from another branch to present working branch 
