@@ -1,0 +1,66 @@
+
+Git commands: 
+
+git@github.com:<username>/Git-demo.git // To clone a remote repository 
+
+// create a new repository from the command line
+git remote add origin git@github.com:<>/git-demo.git
+
+git checkout -b branch1
+git status 
+git add . / git add <file name>
+git commit -m "first commit"       // git commit —amend
+git push origin branch1      //  git push –u origin <local branch name>
+git pr create 
+
+git push -u origin master
+
+git remote -v        // to see the git origin details
+
+git branch -D <branchName> (delete a local branch )
+
+
+git reset --soft HEAD^     # use --soft if you want to keep your changes
+git reset --hard HEAD^     # use --hard if you don't care about keeping the changes you made
+You want to nuke latest commit and never see it again (your files are reset to their original state):
+git reset --hard HEAD~1
+git rebase -i HEAD~4
+
+git stash 
+// this command will undo the changes to the previous git commit and 
+take the edited changes if any(the present working changes) and store it in the .git file 
+
+After working on 
+If we want to get the changes back we can do git stash apply and 
+it will get(undo) all our stored changes from .git file to our working repository 
+
+
+Here are the steps to rename the branch:
+1. switch to branch which needs to be renamed
+2. git branch -m <new_name>
+3. git push origin :<old_name>
+4. git push origin <new_name>:refs/heads/<new_name>
+
+git reset —hard HEAD~1  // to hard reset to the last commit in local
+To revert a commit(single or multiple commits) from remote branch 
+(soft -> keep your files) 
+In local do a $ git reset <commit Id> // this resets the origin to that code and reverts all the changes after that in local 
+In order to push this to origin 
+$ git push --force origin <branch name>
+
+
+git branch -D <branchName> (delete a local branch )
+git push origin --delete <branch Name> // delete a remote branch
+
+Delete all local branches
+git branch | grep -v "master" | xargs git branch -D 
+
+
+git ls-remote // how to see the remote branches
+
+To checkout a remote branch locally
+git checkout -t origin/<feature branch name>        // track 
+
+
+git cherry-pick <commitId> // we can use it to get a commit from another branch to present working branch 
+
