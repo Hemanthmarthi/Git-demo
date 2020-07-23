@@ -8,8 +8,6 @@ GitHub is a website where you can store your git information as a back-up or for
 2. It helps you know what is different between two versions (e.g., it answers the question, "It worked last time, what changed?") 
 3. If two people are both updating a file, it helps you manage any differences between their versions
 
-
-
 Second commit 
 
 
